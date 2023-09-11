@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <cmath>
 #include <math.h>
@@ -9,8 +8,10 @@ using namespace std;
 void DZ_1_1()
 {
     setlocale(LC_ALL, "Russian");
-    cout << "Привет Антон\n";
+
+    std::cout << "Привет Кира" << endl;
 }
+
 
 
 void DZ_1_2()
@@ -23,7 +24,7 @@ void DZ_1_2()
     cin >> c;
     if (b == 0)
     {
-        cout << "an infinite number of solutions";
+        cout << "an infinite number of solutions" << endl;
     }
     else if (c == 0)
     {
@@ -52,7 +53,7 @@ void DZ_1_3()
     double discriminant = b * b - 4 * a * c;
     if (discriminant < 0)
     {
-        cout << "no solutions";
+        cout << "no solutions" << endl;
     }
     else if (discriminant == 0)
     {
@@ -77,11 +78,11 @@ void DZ_1_4()
 
     if (light or (day and window))
     {
-        cout << "В комноте светло";
+        cout << "В комноте светло" << endl;
     }
     else
     {
-        cout << "В комноте темно";
+        cout << "В комноте темно" << endl;
     }
 }
 
@@ -90,14 +91,17 @@ void DZ_2_1()
 {
     float pi = 3.141593;
     float h;
+    cout << "h =" << endl;
     cin >> h;
+    cout << "R =" << endl;
     float R;
     cin >> R;
+    cout << "r =" << endl;
     float r;
     cin >> r;
     double x = (pow(R, 2) + r * R + pow(r, 2));
     cout << 1 / 3 * h * pi * x;
-    cout << pi * x;
+    cout << pi * x << endl;
 }
 
 
@@ -126,29 +130,68 @@ void DZ_2_3() {
 
 void DZ_Empty() {
     cout << "Task not found" << endl;
-    _getch();
 }
 
 
 int main()
 {
+    void (*psl)() = DZ_Empty;
     int task, number;
-    void (*DZ11)() = DZ_1_1;
-    tasks[][] = {
-        {DZ11, DZ11, DZ11, DZ11},
-        {DZ11, DZ11, DZ11, DZ11}
-    };
-    cout << "select task" << endl;
+    cout << "Select task" << endl;
     cin >> task;
-    cout << "select number" << endl;
+    cout << "select task number" << endl;
     cin >> number;
+
+    switch (task)
+    {case 1:
+        switch (number)
+        {
+        case 1:
+            psl = DZ_1_1;
+            break;
+        case 2:
+            psl = DZ_1_2;
+            break;
+        case 3:
+            psl = DZ_1_3;
+            break;
+        case 4:
+            psl = DZ_1_4;
+            break;
+        default:
+            psl = DZ_Empty;
+            break;
+        }
+        break;
+    case 2:
+        switch (number)
+        {
+        case 1:
+            psl = DZ_2_1;
+            break;
+        case 2:
+            psl = DZ_2_2;
+            break;
+        case 3:
+            psl = DZ_2_3;
+            break;
+        default:
+            psl = DZ_Empty;
+            break;
+        }
+        break;
+    default:
+        psl = DZ_Empty;
+        break;
+    }
+
     system("cls");
     while (true)
     {
-        tasks[task][number]();
+        psl();
         char a;
         cout << "press any button to continue" << endl;
-        cin >> a;
+        a = _getch();
         char m = 'm';
         if (a == m) {
             system("cls");
