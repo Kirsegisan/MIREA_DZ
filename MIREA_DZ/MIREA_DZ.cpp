@@ -1,4 +1,5 @@
 #include <iostream>
+#include "DZ_23.cpp"
 #include <cmath>
 #include <math.h>
 #include <conio.h>
@@ -123,7 +124,10 @@ void DZ_2_2() {
 }
 
 
-void DZ_2_3() {}
+void DZ_2_3() 
+{
+    DZ_23();
+}
 
 
 void DZ_Empty() {
