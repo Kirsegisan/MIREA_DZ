@@ -1,17 +1,16 @@
-﻿
-// ZhulinAA.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
 
 #include <iostream>
 #include <cmath>
 #include <math.h>
+#include <conio.h>
 
 using namespace std;
 
 void DZ_1_1()
 {
-    std::cout << "Hello Kira\n";
-};
+    setlocale(LC_ALL, "Russian");
+    cout << "Привет Антон\n";
+}
 
 
 void DZ_1_2()
@@ -36,7 +35,7 @@ void DZ_1_2()
     }
 
 
-};
+}
 
 
 void DZ_1_3()
@@ -74,9 +73,9 @@ void DZ_1_4()
     setlocale(LC_ALL, "Russian");
     bool light = false;
     bool day = true;
-    bool window = false;
+    bool window = true;
 
-    if (light or day and window)
+    if (light or (day and window))
     {
         cout << "В комноте светло";
     }
@@ -102,9 +101,64 @@ void DZ_2_1()
 }
 
 
+void DZ_2_2() {
+
+    double x, a, w;
+    cout << "set X" << endl;
+    cin >> x;
+    cout << "set A" << endl;
+    cin >> a;
+    if (abs(x) < 1) {
+        w = a * log(abs(a));
+    }
+    else{
+        w = sqrt(a - pow(x, 2));
+    }
+    cout << "w = ";
+    cout << w << endl;
+}
+
+
+void DZ_2_3() {
+
+}
+
+
+void DZ_Empty() {
+    cout << "Task not found" << endl;
+    _getch();
+}
+
+
 int main()
 {
-    DZ_2_1();
+    int task, number;
+    void (*DZ11)() = DZ_1_1;
+    tasks[][] = {
+        {DZ11, DZ11, DZ11, DZ11},
+        {DZ11, DZ11, DZ11, DZ11}
+    };
+    cout << "select task" << endl;
+    cin >> task;
+    cout << "select number" << endl;
+    cin >> number;
+    system("cls");
+    while (true)
+    {
+        tasks[task][number]();
+        char a;
+        cout << "press any button to continue" << endl;
+        cin >> a;
+        char m = 'm';
+        if (a == m) {
+            system("cls");
+            main();
+            break;
+        }
+        system("cls");
+    }
+    return 0;
+
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
