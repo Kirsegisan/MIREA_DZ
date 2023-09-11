@@ -123,9 +123,7 @@ void DZ_2_2() {
 }
 
 
-void DZ_2_3() {
-
-}
+void DZ_2_3() {}
 
 
 void DZ_Empty() {
