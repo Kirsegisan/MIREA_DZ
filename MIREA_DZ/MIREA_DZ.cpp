@@ -5,6 +5,7 @@
 #include "DZ_2_3.cpp"
 #include "DZ_2_5.cpp"
 #include "DZ_2_4.cpp"
+#include "DZ_3_1.cpp"
 
 using namespace std;
 
@@ -186,8 +187,19 @@ int main()
             break;
         }
         break;
-    default:
-        psl = DZ_Empty;
+    case 3:
+        switch (number)
+        {
+        case 1:
+            psl = DZ_3_1;
+            break;
+        default:
+            psl = DZ_Empty;
+            break;
+        }
+        break;
+        default:
+            psl = DZ_Empty;
         break;
     }
 
