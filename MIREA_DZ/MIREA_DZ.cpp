@@ -4,6 +4,7 @@
 #include <conio.h>
 #include "DZ_2_3.cpp"
 #include "DZ_2_5.cpp"
+#include "DZ_2_4.cpp"
 
 using namespace std;
 
@@ -173,6 +174,9 @@ int main()
             break;
         case 3:
             psl = DZ_2_3;
+            break;
+        case 4:
+            psl = DZ_2_4;
             break;
         case 5:
             psl = DZ_2_5;
