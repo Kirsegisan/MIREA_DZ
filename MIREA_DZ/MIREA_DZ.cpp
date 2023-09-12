@@ -2,6 +2,8 @@
 #include <cmath>
 #include <math.h>
 #include <conio.h>
+#include "DZ_2_3.cpp"
+#include "DZ_2_5.cpp"
 
 using namespace std;
 
@@ -22,13 +24,13 @@ void DZ_1_2()
     cin >> b;
     cout << "c = ";
     cin >> c;
-    if (b == 0)
+    if (b == 0 and c == 0)
     {
         cout << "an infinite number of solutions" << endl;
     }
-    else if (c == 0)
+    else if (b == 0)
     {
-        cout << 0;
+        cout <<  "no solutions" << ".\n";
     }
     else
     {
@@ -123,9 +125,6 @@ void DZ_2_2() {
 }
 
 
-void DZ_2_3() {
-
-}
 
 
 void DZ_Empty() {
@@ -174,6 +173,9 @@ int main()
             break;
         case 3:
             psl = DZ_2_3;
+            break;
+        case 5:
+            psl = DZ_2_5;
             break;
         default:
             psl = DZ_Empty;

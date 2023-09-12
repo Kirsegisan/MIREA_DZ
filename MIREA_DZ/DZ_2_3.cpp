@@ -11,8 +11,9 @@ void DZ_2_3() {
     cout << "print x:";
     cin >> x;
     z = (log(b - y) * sqrt(b - x));
-    cout << "result:" << z;
+    cout << "result:" << z << ".\n";
 }
-int main() {
+int DZ23() {
     DZ_2_3();
+    return 0;
 }
