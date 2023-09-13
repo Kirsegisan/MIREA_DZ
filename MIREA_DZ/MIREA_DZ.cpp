@@ -6,6 +6,7 @@
 #include "DZ_2_5.cpp"
 #include "DZ_2_4.cpp"
 #include "DZ_3_1.cpp"
+#include "DZ_3_3.cpp"
 
 using namespace std;
 
@@ -195,6 +196,9 @@ int main()
             break;
         default:
             psl = DZ_Empty;
+            break;
+        case 3:
+            psl = DZ_3_3; // Работает не с первого раза, но все работает
             break;
         }
         break;
