@@ -9,7 +9,13 @@ y = 5;
 step = 0.5;
 while (x <= 4){
     y = ((x*x - 2*x + 2) / (x - 1) );
-    cout << "y = " << y << ", x = " << x <<".\n";
+    if (x == 1) {
+        cout << " /0 \n ";
+    }
+    else
+    {
+        cout << "y = " << y << ", x = " << x <<".\n";
+    }
     x = x + step;
 }
 }
