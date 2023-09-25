@@ -1,20 +1,16 @@
 #include <iostream>
 #include <fstream>
-#include <string>     // для std::getline
+#include <string>
 using namespace std;
 void DZ_3_3()
 {
-    string text;
-
-    ifstream in("DZ_3_3.txt"); // окрываем файл для чтения
-    if (in.is_open())
-    {
-        while (getline(in, text))
-        {
-            cout << text << endl;
-        }
-    }
-    in.close();     // закрываем файл
+    string output;
+    ifstream fin("DZ_3_3.txt");
+    ofstream file_content("DZ_3_3.txt");
+    cin >> output;
+    file_content << output;
+    fin.close();
+    file_content.close();
 }
 
 int DZ33(){

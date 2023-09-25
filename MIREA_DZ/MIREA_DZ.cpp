@@ -8,6 +8,8 @@
 #include "DZ_3_1.cpp"
 #include "DZ_3_2.cpp"
 #include "DZ_3_3.cpp"
+#include "DZ_3_4.cpp"
+#include "DZ_3_5.cpp"
 
 using namespace std;
 
@@ -207,6 +209,12 @@ int main()
             break;
         case 3:
             psl = DZ_3_3; // Работает не с первого раза, но все работает
+            break;
+        case 4:
+            psl = DZ_3_4;
+            break;
+        case 5:
+            psl = DZ_3_5;
             break;
         default:
             psl = DZ_Empty;
