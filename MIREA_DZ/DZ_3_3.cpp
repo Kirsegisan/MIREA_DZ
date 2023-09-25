@@ -7,6 +7,7 @@ void DZ_3_3()
     string output;
     ifstream fin("DZ_3_3.txt");
     ofstream file_content("DZ_3_3.txt");
+    cout << "Write a massive:" << endl;
     cin >> output;
     file_content << output;
     fin.close();
