@@ -8,13 +8,14 @@ void DZ_3_4()
     ifstream fin("DZ_3_3.txt");
     ofstream file_content("DZ_3_3.txt");
     cin >> output;
-    file_content << output;
      fin.close();
-     file_content.close();
     for (char ch : output){
-        if (isdigit(ch) == 1)
+        if (isdigit(ch) == 1) {
             cout << ch;
+        }
     }
+    file_content << output;
+    file_content.close();
     cout << "\n";
 }
 

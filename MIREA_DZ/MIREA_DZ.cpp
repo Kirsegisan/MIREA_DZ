@@ -10,6 +10,12 @@
 #include "DZ_3_3.cpp"
 #include "DZ_3_4.cpp"
 #include "DZ_3_5.cpp"
+#include "DZ_4_1.cpp"
+#include "DZ_4_2.cpp"
+#include "DZ_4_3.cpp"
+#include "DZ_4_4.cpp"
+#include "DZ_4_5.cpp"
+
 
 using namespace std;
 
@@ -107,9 +113,14 @@ void DZ_2_1()
     cout << "r =" << endl;
     float r;
     cin >> r;
-    double x = (pow(R, 2) + r * R + pow(r, 2));
-    cout << 1 / 3 * h * pi * x;
-    cout << pi * x << endl;
+    if (r == R){
+        cout << "This is cilindr" << endl;
+    }
+    else {
+        double x = (pow(R, 2) + r * R + pow(r, 2));
+        cout << 1 / 3 * h * pi * x;
+        cout << pi * x << endl;
+    }
 }
 
 
@@ -219,6 +230,28 @@ int main()
         default:
             psl = DZ_Empty;
             break;
+        }
+        break;
+    case 4:
+        switch (number){
+            case 1:
+                psl = DZ_4_1;
+                break;
+            case 2:
+                psl = DZ_4_2;
+                break;
+            case 3:
+                psl = DZ_4_3;
+                break;
+            case 4:
+                psl = DZ_4_4;
+                break;
+            case 5:
+                psl = DZ_4_5;
+                break;
+            default:
+                psl = DZ_Empty;
+                break;
         }
         break;
     default:
