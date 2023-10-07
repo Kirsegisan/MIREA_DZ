@@ -5,21 +5,23 @@ using namespace std;
 
 void DZ_4_5() {
 
-    int len = 30;
-    char Schedule[len][20];
-    int angle_y;
-    for (int i = 0; i < len; i++){
-        for (int j = 0; j < 20; j++){
-             Schedule[i][j] = '0';
+    int len = 50;
+    double pi = 3.1415926535;
+    char Schedule[50][100];
+    double angle_y;
+    for (int i = 0; i < 50; i++){
+        for (int j = 0; j < 100; j++){
+             Schedule[i][j] = ' ';
         }
     }
-    for (int x = 0; x < len; x++) {
-        angle_y = (sin(x) + 1) * 10;
-        Schedule[x][angle_y] = '*';
+    for (int x = 0; x < 100; x++) {
+        angle_y = (sin((pi / 24) * x) * 25) + 25;
+        Schedule[(int)angle_y][x] = '*';
     }
-    for (int i = 0; i < len; i++){
-        for (int j = 0; j < 20; j++){
+    for (int i = 0; i < 50; i++){
+        for (int j = 0; j < 100; j++){
             cout << Schedule[i][j];
         }
+        cout << endl;
     }
 }
