@@ -3,6 +3,23 @@
 #include <cmath>
 #include <math.h>
 #include <conio.h>
+#include "DZ_2_3.cpp"
+#include "DZ_2_5.cpp"
+#include "DZ_2_4.cpp"
+#include "DZ_3_1.cpp"
+#include "DZ_3_2.cpp"
+#include "DZ_3_3.cpp"
+#include "DZ_3_4.cpp"
+#include "DZ_3_5.cpp"
+#include "DZ_4_1.cpp"
+#include "DZ_4_2.cpp"
+#include "DZ_4_3.cpp"
+#include "DZ_4_4.cpp"
+#include "DZ_4_5.cpp"
+#include "DZ_4_6.cpp"
+
+=======
+
 
 using namespace std;
 
@@ -183,6 +200,55 @@ int main()
             break;
         }
         break;
+    case 3:
+        switch (number)
+        {
+        case 1:
+            psl = DZ_3_1;
+            break;
+        case 2:
+            psl = DZ_3_2;
+            break;
+        case 3:
+            psl = DZ_3_3; // Работает не с первого раза, но все работает
+            break;
+        case 4:
+            psl = DZ_3_4;
+            break;
+        case 5:
+            psl = DZ_3_5;
+            break;
+        default:
+            psl = DZ_Empty;
+            break;
+        }
+        break;
+    case 4:
+        switch (number){
+            case 1:
+                psl = DZ_4_1;
+                break;
+            case 2:
+                psl = DZ_4_2;
+                break;
+            case 3:
+                psl = DZ_4_3;
+                break;
+            case 4:
+                psl = DZ_4_4;
+                break;
+            case 5:
+                psl = DZ_4_5;
+                break;
+            case 6:
+                psl = DZ_4_6;
+                break;
+            default:
+                psl = DZ_Empty;
+                break;
+        }
+        break;
+
     default:
         psl = DZ_Empty;
         break;
