@@ -1,4 +1,5 @@
 #include <iostream>
+#include "DZ_23.cpp"
 #include <cmath>
 #include <math.h>
 #include <conio.h>
@@ -16,6 +17,8 @@
 #include "DZ_4_4.cpp"
 #include "DZ_4_5.cpp"
 #include "DZ_4_6.cpp"
+
+=======
 
 
 using namespace std;
@@ -37,13 +40,13 @@ void DZ_1_2()
     cin >> b;
     cout << "c = ";
     cin >> c;
-    if (b == 0 and c == 0)
+    if (b == 0)
     {
         cout << "an infinite number of solutions" << endl;
     }
-    else if (b == 0)
+    else if (c == 0)
     {
-        cout << "no solutions" << ".\n";
+        cout << 0;
     }
     else
     {
@@ -114,14 +117,9 @@ void DZ_2_1()
     cout << "r =" << endl;
     float r;
     cin >> r;
-    if (r == R){
-        cout << "This is cilindr" << endl;
-    }
-    else {
-        double x = (pow(R, 2) + r * R + pow(r, 2));
-        cout << 1 / 3 * h * pi * x;
-        cout << pi * x << endl;
-    }
+    double x = (pow(R, 2) + r * R + pow(r, 2));
+    cout << 1 / 3 * h * pi * x;
+    cout << pi * x << endl;
 }
 
 
@@ -136,19 +134,17 @@ void DZ_2_2() {
         w = a * log(abs(a));
     }
     else {
-        if (pow(x, 2) < a) {
-            w = sqrt(a - pow(x, 2));
-        }
-        else
-        {
-            cout << " x ^ 2 shut been > a";
-        }
+        w = sqrt(a - pow(x, 2));
     }
     cout << "w = ";
     cout << w << endl;
 }
 
 
+void DZ_2_3() 
+{
+    DZ_23();
+}
 
 
 void DZ_Empty() {
@@ -198,12 +194,6 @@ int main()
             break;
         case 3:
             psl = DZ_2_3;
-            break;
-        case 4:
-            psl = DZ_2_4;
-            break;
-        case 5:
-            psl = DZ_2_5;
             break;
         default:
             psl = DZ_Empty;
@@ -258,6 +248,7 @@ int main()
                 break;
         }
         break;
+
     default:
         psl = DZ_Empty;
         break;
@@ -282,3 +273,13 @@ int main()
 
 }
 
+// Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
+// Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
+
+// Советы по началу работы 
+//   1. В окне обозревателя решений можно добавлять файлы и управлять ими.
+//   2. В окне Team Explorer можно подключиться к системе управления версиями.
+//   3. В окне "Выходные данные" можно просматривать выходные данные сборки и другие сообщения.
+//   4. В окне "Список ошибок" можно просматривать ошибки.
+//   5. Последовательно выберите пункты меню "Проект" > "Добавить новый элемент", чтобы создать файлы кода, или "Проект" > "Добавить существующий элемент", чтобы добавить в проект существующие файлы кода.
+//   6. Чтобы снова открыть этот проект позже, выберите пункты меню "Файл" > "Открыть" > "Проект" и выберите SLN-файл.
