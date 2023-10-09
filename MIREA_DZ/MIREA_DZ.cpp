@@ -1,5 +1,4 @@
 #include <iostream>
-#include "DZ_23.cpp"
 #include <cmath>
 #include <math.h>
 #include <conio.h>
@@ -18,8 +17,6 @@
 #include "DZ_4_5.cpp"
 #include "DZ_4_6.cpp"
 
-=======
-
 
 using namespace std;
 
@@ -27,7 +24,7 @@ void DZ_1_1()
 {
     setlocale(LC_ALL, "Russian");
 
-    std::cout << "Привет Кира" << endl;
+    std::cout << "Hello Kira" << endl;
 }
 
 
@@ -40,13 +37,13 @@ void DZ_1_2()
     cin >> b;
     cout << "c = ";
     cin >> c;
-    if (b == 0)
+    if (b == 0 and c == 0)
     {
         cout << "an infinite number of solutions" << endl;
     }
-    else if (c == 0)
+    else if (b == 0)
     {
-        cout << 0;
+        cout << "no solutions" << ".\n";
     }
     else
     {
@@ -117,9 +114,14 @@ void DZ_2_1()
     cout << "r =" << endl;
     float r;
     cin >> r;
-    double x = (pow(R, 2) + r * R + pow(r, 2));
-    cout << 1 / 3 * h * pi * x;
-    cout << pi * x << endl;
+    if (r == R){
+        cout << "This is cilindr" << endl;
+    }
+    else {
+        double x = (pow(R, 2) + r * R + pow(r, 2));
+        cout << 1 / 3 * h * pi * x;
+        cout << pi * x << endl;
+    }
 }
 
 
@@ -134,17 +136,19 @@ void DZ_2_2() {
         w = a * log(abs(a));
     }
     else {
-        w = sqrt(a - pow(x, 2));
+        if (pow(x, 2) < a) {
+            w = sqrt(a - pow(x, 2));
+        }
+        else
+        {
+            cout << " x ^ 2 shut been > a";
+        }
     }
     cout << "w = ";
     cout << w << endl;
 }
 
 
-void DZ_2_3() 
-{
-    DZ_23();
-}
 
 
 void DZ_Empty() {
@@ -163,95 +167,100 @@ int main()
 
     switch (task)
     {
-    case 1:
-        switch (number)
-        {
         case 1:
-            psl = DZ_1_1;
+            switch (number)
+            {
+                case 1:
+                    psl = DZ_1_1;
+                    break;
+                case 2:
+                    psl = DZ_1_2;
+                    break;
+                case 3:
+                    psl = DZ_1_3;
+                    break;
+                case 4:
+                    psl = DZ_1_4;
+                    break;
+                default:
+                    psl = DZ_Empty;
+                    break;
+            }
             break;
         case 2:
-            psl = DZ_1_2;
+            switch (number)
+            {
+                case 1:
+                    psl = DZ_2_1;
+                    break;
+                case 2:
+                    psl = DZ_2_2;
+                    break;
+                case 3:
+                    psl = DZ_2_3;
+                    break;
+                case 4:
+                    psl = DZ_2_4;
+                    break;
+                case 5:
+                    psl = DZ_2_5;
+                    break;
+                default:
+                    psl = DZ_Empty;
+                    break;
+            }
             break;
         case 3:
-            psl = DZ_1_3;
+            switch (number)
+            {
+                case 1:
+                    psl = DZ_3_1;
+                    break;
+                case 2:
+                    psl = DZ_3_2;
+                    break;
+                case 3:
+                    psl = DZ_3_3; // Работает не с первого раза, но все работает
+                    break;
+                case 4:
+                    psl = DZ_3_4;
+                    break;
+                case 5:
+                    psl = DZ_3_5;
+                    break;
+                default:
+                    psl = DZ_Empty;
+                    break;
+            }
             break;
         case 4:
-            psl = DZ_1_4;
+            switch (number){
+                case 1:
+                    psl = DZ_4_1;
+                    break;
+                case 2:
+                    psl = DZ_4_2;
+                    break;
+                case 3:
+                    psl = DZ_4_3;
+                    break;
+                case 4:
+                    psl = DZ_4_4;
+                    break;
+                case 5:
+                    psl = DZ_4_5;
+                    break;
+                case 6:
+                    psl = DZ_4_6;
+                    break;
+                default:
+                    psl = DZ_Empty;
+                    break;
+            }
             break;
         default:
             psl = DZ_Empty;
             break;
-        }
-        break;
-    case 2:
-        switch (number)
-        {
-        case 1:
-            psl = DZ_2_1;
-            break;
-        case 2:
-            psl = DZ_2_2;
-            break;
-        case 3:
-            psl = DZ_2_3;
-            break;
-        default:
-            psl = DZ_Empty;
-            break;
-        }
-        break;
-    case 3:
-        switch (number)
-        {
-        case 1:
-            psl = DZ_3_1;
-            break;
-        case 2:
-            psl = DZ_3_2;
-            break;
-        case 3:
-            psl = DZ_3_3; // Работает не с первого раза, но все работает
-            break;
-        case 4:
-            psl = DZ_3_4;
-            break;
-        case 5:
-            psl = DZ_3_5;
-            break;
-        default:
-            psl = DZ_Empty;
-            break;
-        }
-        break;
-    case 4:
-        switch (number){
-            case 1:
-                psl = DZ_4_1;
-                break;
-            case 2:
-                psl = DZ_4_2;
-                break;
-            case 3:
-                psl = DZ_4_3;
-                break;
-            case 4:
-                psl = DZ_4_4;
-                break;
-            case 5:
-                psl = DZ_4_5;
-                break;
-            case 6:
-                psl = DZ_4_6;
-                break;
-            default:
-                psl = DZ_Empty;
-                break;
-        }
-        break;
-
-    default:
-        psl = DZ_Empty;
-        break;
     }
 
     system("cls");
@@ -272,14 +281,3 @@ int main()
     return 0;
 
 }
-
-// Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
-// Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
-
-// Советы по началу работы 
-//   1. В окне обозревателя решений можно добавлять файлы и управлять ими.
-//   2. В окне Team Explorer можно подключиться к системе управления версиями.
-//   3. В окне "Выходные данные" можно просматривать выходные данные сборки и другие сообщения.
-//   4. В окне "Список ошибок" можно просматривать ошибки.
-//   5. Последовательно выберите пункты меню "Проект" > "Добавить новый элемент", чтобы создать файлы кода, или "Проект" > "Добавить существующий элемент", чтобы добавить в проект существующие файлы кода.
-//   6. Чтобы снова открыть этот проект позже, выберите пункты меню "Файл" > "Открыть" > "Проект" и выберите SLN-файл.
