@@ -15,6 +15,7 @@
 #include "DZ_4_3.cpp"
 #include "DZ_4_4.cpp"
 #include "DZ_4_5.cpp"
+#include "DZ_4_6.cpp"
 
 
 using namespace std;
@@ -23,7 +24,7 @@ void DZ_1_1()
 {
     setlocale(LC_ALL, "Russian");
 
-    std::cout << "Привет Кира" << endl;
+    std::cout << "Hello Kira" << endl;
 }
 
 
@@ -166,97 +167,100 @@ int main()
 
     switch (task)
     {
-    case 1:
-        switch (number)
-        {
         case 1:
-            psl = DZ_1_1;
+            switch (number)
+            {
+                case 1:
+                    psl = DZ_1_1;
+                    break;
+                case 2:
+                    psl = DZ_1_2;
+                    break;
+                case 3:
+                    psl = DZ_1_3;
+                    break;
+                case 4:
+                    psl = DZ_1_4;
+                    break;
+                default:
+                    psl = DZ_Empty;
+                    break;
+            }
             break;
         case 2:
-            psl = DZ_1_2;
+            switch (number)
+            {
+                case 1:
+                    psl = DZ_2_1;
+                    break;
+                case 2:
+                    psl = DZ_2_2;
+                    break;
+                case 3:
+                    psl = DZ_2_3;
+                    break;
+                case 4:
+                    psl = DZ_2_4;
+                    break;
+                case 5:
+                    psl = DZ_2_5;
+                    break;
+                default:
+                    psl = DZ_Empty;
+                    break;
+            }
             break;
         case 3:
-            psl = DZ_1_3;
+            switch (number)
+            {
+                case 1:
+                    psl = DZ_3_1;
+                    break;
+                case 2:
+                    psl = DZ_3_2;
+                    break;
+                case 3:
+                    psl = DZ_3_3; // Работает не с первого раза, но все работает
+                    break;
+                case 4:
+                    psl = DZ_3_4;
+                    break;
+                case 5:
+                    psl = DZ_3_5;
+                    break;
+                default:
+                    psl = DZ_Empty;
+                    break;
+            }
             break;
         case 4:
-            psl = DZ_1_4;
+            switch (number){
+                case 1:
+                    psl = DZ_4_1;
+                    break;
+                case 2:
+                    psl = DZ_4_2;
+                    break;
+                case 3:
+                    psl = DZ_4_3;
+                    break;
+                case 4:
+                    psl = DZ_4_4;
+                    break;
+                case 5:
+                    psl = DZ_4_5;
+                    break;
+                case 6:
+                    psl = DZ_4_6;
+                    break;
+                default:
+                    psl = DZ_Empty;
+                    break;
+            }
             break;
         default:
             psl = DZ_Empty;
             break;
-        }
-        break;
-    case 2:
-        switch (number)
-        {
-        case 1:
-            psl = DZ_2_1;
-            break;
-        case 2:
-            psl = DZ_2_2;
-            break;
-        case 3:
-            psl = DZ_2_3;
-            break;
-        case 4:
-            psl = DZ_2_4;
-            break;
-        case 5:
-            psl = DZ_2_5;
-            break;
-        default:
-            psl = DZ_Empty;
-            break;
-        }
-        break;
-    case 3:
-        switch (number)
-        {
-        case 1:
-            psl = DZ_3_1;
-            break;
-        case 2:
-            psl = DZ_3_2;
-            break;
-        case 3:
-            psl = DZ_3_3; // Работает не с первого раза, но все работает
-            break;
-        case 4:
-            psl = DZ_3_4;
-            break;
-        case 5:
-            psl = DZ_3_5;
-            break;
-        default:
-            psl = DZ_Empty;
-            break;
-        }
-        break;
-    case 4:
-        switch (number){
-            case 1:
-                psl = DZ_4_1;
-                break;
-            case 2:
-                psl = DZ_4_2;
-                break;
-            case 3:
-                psl = DZ_4_3;
-                break;
-            case 4:
-                psl = DZ_4_4;
-                break;
-            case 5:
-                psl = DZ_4_5;
-                break;
-            default:
-                psl = DZ_Empty;
-                break;
-        }
-        break;
-    default:
-        psl = DZ_Empty;
-        break;
     }
 
     system("cls");
@@ -277,4 +281,3 @@ int main()
     return 0;
 
 }
-
