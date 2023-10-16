@@ -4,7 +4,7 @@ using namespace std;
 
 int S(int s, int m, int i, int c) {
     cout << s << endl;
-    return S((m * s + 1 + i) % c, m, i, c);
+    return S((m * s + 1 + i) % c, m, i, c); // Рекурсия
 }
 
 
