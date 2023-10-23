@@ -61,15 +61,12 @@ void DZ_4_9(){
     cin >> to;
     j = size(x);
     for(int i = 0; i < j; i++){
-        angle_x += toInt(x[j - 1 - i]) * pow(in, i);
+        angle_x += toInt(x[j - 1 - i]) * pow(in, i); // Полином
     }
-    cout << angle_x << endl;
     string result;
     result = "";
     while(angle_x > 0){
-        cout << result << endl;
         result = toStr(angle_x % to) + result;
-        cout << result << endl;
         angle_x = angle_x / to;
     }
 
