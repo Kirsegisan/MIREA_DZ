@@ -1,6 +1,8 @@
 #include <iostream>
+#include "DZ_4_9.h"
 
 using namespace std;
+
 
 int toInt(char x){
     switch (x){
@@ -24,6 +26,8 @@ int toInt(char x){
 
     }
 }
+
+
 char toStr(int x){
     switch(x){
         case 0: return '0';
@@ -46,6 +50,24 @@ char toStr(int x){
     }
 }
 
+string inAnythingtoAnything(int in, int to, string x){
+    int j;
+    int angle_x = 0;
+    j = size(x);
+    for(int i = 0; i < j; i++){
+        angle_x += toInt(x[j - 1 - i]) * pow(in, i); // Полином
+    }
+    string result;
+    result = "";
+    while(angle_x > 0){
+        result = toStr(angle_x % to) + result;
+        angle_x = angle_x / to;
+    }
+
+
+    return result;
+}
+
 
 void DZ_4_9(){
     string x;
@@ -59,17 +81,7 @@ void DZ_4_9(){
     cin >> in;
     cout << "print to: ";
     cin >> to;
-    j = size(x);
-    for(int i = 0; i < j; i++){
-        angle_x += toInt(x[j - 1 - i]) * pow(in, i); // Полином
-    }
-    string result;
-    result = "";
-    while(angle_x > 0){
-        result = toStr(angle_x % to) + result;
-        angle_x = angle_x / to;
+    cout << inAnythingtoAnything(in, to, x);
     }
 
 
-    cout << "result: " << result << endl;
-}

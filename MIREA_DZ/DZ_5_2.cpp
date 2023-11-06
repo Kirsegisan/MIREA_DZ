@@ -13,6 +13,7 @@ void DZ_5_2(){
         for (int j = pow(i, 0.5); j > 1; --j) {
             if (i % j == 0) {
                 flag = false;
+                break;
             }
         }
         if (flag) {
