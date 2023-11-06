@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void DZ_6_1(){
+void DZ_5_4(){
     int choose;
     cout << "\n \n Choose task: " << endl;
     cin >> choose;

@@ -294,7 +294,7 @@ int main()
                     psl = DZ_5_3_3;
                     break;
                 case 6:
-                    psl = DZ_6_1;
+                    psl = DZ_5_4;
                     break;
                 default:
                     psl = DZ_Empty;
