@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void DZ_5_5()
+int main()
 {
     int num, g, s, b, v, bl;
     string c;
@@ -76,7 +76,7 @@ void DZ_5_5()
     }
 
     ofstream fout;
-    fout.open("DZ_5_5.txt");
+    fout.open("DZ_5_5.txt"); // Создаём файл
     for (int i = 0; i < num; i++) {
         fout << str[i] << " " << gol[i] << " " << sil[i] << " " << bro[i] << " " << sum[i] << " " << score[i];
         fout << endl;
@@ -90,10 +90,10 @@ void DZ_5_5()
     sum.clear();
     score.clear();
 
-    ifstream ff2("DZ_5_5_1.txt");
+    ifstream res("DZ_5_5.txt"); // Читаем файл
     for (int i = 0; i < num; i++)
     {
-        ff2 >> c >> g >> s >> b >> v >> bl;
+        res >> c >> g >> s >> b >> v >> bl;
         str.push_back(c);
         gol.push_back(g);
         sil.push_back(s);
@@ -101,7 +101,7 @@ void DZ_5_5()
         sum.push_back(v);
         score.push_back(bl);
     }
-    ff2.close();
+    res.close();
 
     for (int i = 0; i < num; i++)
     {
@@ -110,4 +110,5 @@ void DZ_5_5()
     }
 
     system("pause");
+    return 0;
 }
