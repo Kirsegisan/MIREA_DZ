@@ -3,7 +3,7 @@
 #include <cctype>
 #include <string>
 
-using namespace std; // 8, 9.
+using namespace std; // 8, 9 (Кира).
 
 
 int index(char symbol){

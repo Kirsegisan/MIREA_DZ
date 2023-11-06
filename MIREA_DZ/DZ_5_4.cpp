@@ -6,7 +6,7 @@ using namespace std;
 
 void DZ_6_1(){
     int choose;
-    cout << "Choose task: " << endl;
+    cout << "\n \n Choose task: " << endl;
     cin >> choose;
     int in;
     int to;
@@ -37,7 +37,6 @@ void DZ_6_1(){
             break;
 
     }
-    int j = 10;
     bool flag = true;
     string input;
     vector<string> F;
