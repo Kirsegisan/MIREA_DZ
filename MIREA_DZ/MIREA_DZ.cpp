@@ -1,5 +1,3 @@
-
-
 #include <iostream>
 #include <cmath>
 #include <conio.h>
@@ -26,6 +24,7 @@
 #include "DZ_5_3_2.cpp"
 #include "DZ_5_3_3.cpp"
 #include "DZ_5_4.cpp"
+#include "DZ_5_5.cpp"
 
 using namespace std;
 
@@ -294,7 +293,10 @@ int main()
                     psl = DZ_5_3_3;
                     break;
                 case 6:
-                    psl = DZ_6_1;
+                    psl = DZ_5_4;
+                    break;
+                case 7:
+                    psl = DZ_5_5;
                     break;
                 default:
                     psl = DZ_Empty;
