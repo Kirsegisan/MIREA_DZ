@@ -8,7 +8,7 @@ using namespace std;
 
 int main()
 {
-    int num, g, s, b, v, bl;
+    int num, g, s, b, summ, scr;
     string c;
     vector<string>str;
     vector<int>gol;
@@ -25,7 +25,7 @@ int main()
         str.push_back(c);
     }
 
-    sort(str.begin(), str.end()); // Со
+    sort(str.begin(), str.end()); // Сортировка стран
 
     cout << "Enter number of gold, silver and bronze medals: " << endl;
     for (int i = 0; i < num; i++)
@@ -93,13 +93,13 @@ int main()
     ifstream res("DZ_5_5.txt"); // Читаем файл
     for (int i = 0; i < num; i++)
     {
-        res >> c >> g >> s >> b >> v >> bl;
+        res >> c >> g >> s >> b >> summ >> scr;
         str.push_back(c);
         gol.push_back(g);
         sil.push_back(s);
         bro.push_back(b);
-        sum.push_back(v);
-        score.push_back(bl);
+        sum.push_back(summ);
+        score.push_back(scr);
     }
     res.close();
 
