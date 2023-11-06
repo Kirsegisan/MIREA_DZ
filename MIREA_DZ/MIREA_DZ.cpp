@@ -1,6 +1,7 @@
+
+
 #include <iostream>
 #include <cmath>
-#include <math.h>
 #include <conio.h>
 #include "DZ_2_3.cpp"
 #include "DZ_2_5.cpp"
@@ -19,7 +20,12 @@
 #include "DZ_4_7.cpp"
 #include "DZ_4_8.cpp"
 #include "DZ_4_9.cpp"
-
+#include "DZ_5_1.cpp"
+#include "DZ_5_2.cpp"
+#include "DZ_5_3_1.cpp"
+#include "DZ_5_3_2.cpp"
+#include "DZ_5_3_3.cpp"
+#include "DZ_5_4.cpp"
 
 using namespace std;
 
@@ -264,6 +270,31 @@ int main()
                     break;
                 case 9:
                     psl = DZ_4_9;
+                    break;
+                default:
+                    psl = DZ_Empty;
+                    break;
+
+            }
+        case 5:
+            switch(number){
+                case 1:
+                    psl = DZ_5_1;
+                    break;
+                case 2:
+                    psl = DZ_5_2;
+                    break;
+                case 3:
+                    psl = DZ_5_3_1;
+                    break;
+                case 4:
+                    psl = DZ_5_3_2;
+                    break;
+                case 5:
+                    psl = DZ_5_3_3;
+                    break;
+                case 6:
+                    psl = DZ_6_1;
                     break;
                 default:
                     psl = DZ_Empty;

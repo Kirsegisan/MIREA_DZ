@@ -1,9 +1,10 @@
 #include <iostream>
-
+#include "DZ_4_9.h"
 
 using namespace std;
 
-int toint(char x){
+
+int toInt(char x){
     switch (x){
         case '0': return 0;
         case '1': return 1;
@@ -27,6 +28,47 @@ int toint(char x){
 }
 
 
+char toStr(int x){
+    switch(x){
+        case 0: return '0';
+        case 1: return '1';
+        case 2: return '2';
+        case 3: return '3';
+        case 4: return '4';
+        case 5: return '5';
+        case 6: return '6';
+        case 7: return '7';
+        case 8: return '8';
+        case 9: return '9';
+        case 10: return 'A';
+        case 11: return 'B';
+        case 12: return 'C';
+        case 13: return 'D';
+        case 14: return 'E';
+        case 15: return 'F';
+        case 16: return 'G';
+    }
+}
+
+string inAnythingtoAnything(int in, int to, string x){
+    int j;
+    int angle_x = 0;
+    j = size(x);
+    for(int i = 0; i < j; i++){
+        angle_x += toInt(x[j - 1 - i]) * pow(in, i); // Полином
+    }
+    string result;
+    result = "";
+    while(angle_x > 0){
+        result = toStr(angle_x % to) + result;
+        angle_x = angle_x / to;
+    }
+
+
+    return result;
+}
+
+
 void DZ_4_9(){
     string x;
     int in;
@@ -39,18 +81,7 @@ void DZ_4_9(){
     cin >> in;
     cout << "print to: ";
     cin >> to;
-    j = size(x);
-    for(int i = 0; i < j; i++){
-        angle_x += toint(x[j - 1 - i]);
+    cout << inAnythingtoAnything(in, to, x);
     }
-    int result = angle_x;
-    if (to < 10){
-        result = 0;
-        while(angle_x > 0){
-            result += angle_x / to;
-            angle_x = angle_x % to;
-        }
 
-    }
-    cout << "result: " << angle_x << endl;
-}
+
