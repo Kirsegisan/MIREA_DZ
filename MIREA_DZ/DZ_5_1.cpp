@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int divison(int firstNumber, int secondNumber){
+int divison(int firstNumber, int secondNumber){ // НОД Делением
     while (firstNumber != 0 and secondNumber != 0){
         if(firstNumber > secondNumber){
             firstNumber = firstNumber % secondNumber;
@@ -15,7 +15,7 @@ int divison(int firstNumber, int secondNumber){
     return firstNumber + secondNumber;
 }
 
-int subtruction(int firstNumber, int secondNumber){
+int subtruction(int firstNumber, int secondNumber){ // НОД Вычитанием
     while (firstNumber != 0 and secondNumber != 0){
         if(firstNumber > secondNumber){
             firstNumber = firstNumber - secondNumber;
@@ -30,13 +30,13 @@ int subtruction(int firstNumber, int secondNumber){
 
 void DZ_5_1(){
     int firstNumber;
-    cout <<"\n \n" "Enter first number: " << endl;
+    cout <<"\n \n" "Enter first number: " << endl; // Ввод первого числа
     cin >> firstNumber;
     int secondNumber;
-    cout << "Enter second number: " << endl;
+    cout << "Enter second number: " << endl; // Ввод второго числа
     cin >> secondNumber;
     int number;
-    cout << "\n 1. Division \n 2.subtruction " << endl;
+    cout << "\n 1. Division \n 2.subtruction " << endl; // Выбор способа нахождения НОД
     cout << "Select method: " << endl;
     cin >> number;
     switch(number){

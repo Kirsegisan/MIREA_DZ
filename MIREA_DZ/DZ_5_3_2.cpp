@@ -4,7 +4,7 @@
 #include <fstream>
 #include <string>
 
-using namespace std; // 32
+using namespace std; // 32 (Игорь)
 
 
 int indexBIMBIMBAMABM(char symbol){ // Пренимает букву и говорит какая эта буква по счёту
@@ -46,7 +46,7 @@ void DZ_5_3_2(){
     cout << "Print shift: " << endl; // Сдвиг
     cin >> shift;
     string result; // Результат
-    for (char ch : output) { // Сдвиг текста
+    for (char ch : output) { // Вывод сдвига текста
         cout << indexBIMBIMBAMABM(indexBIMBIMBAMABM(ch) + shift, shift) << "";
     }
     cout << endl;

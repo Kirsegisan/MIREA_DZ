@@ -37,7 +37,6 @@ void DZ_5_4(){
             break;
 
     }
-    int j = 10;
     bool flag = true;
     string input;
     vector<string> F;
