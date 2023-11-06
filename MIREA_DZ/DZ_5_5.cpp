@@ -75,13 +75,13 @@ int main()
         }
     }
 
-    ofstream fout;
-    fout.open("DZ_5_5.txt"); // Создаём файл
+    ofstream data;
+    data.open("DZ_5_5.txt"); // Создаём файл
     for (int i = 0; i < num; i++) {
-        fout << str[i] << " " << gol[i] << " " << sil[i] << " " << bro[i] << " " << sum[i] << " " << score[i];
-        fout << endl;
+        data << str[i] << " " << gol[i] << " " << sil[i] << " " << bro[i] << " " << sum[i] << " " << score[i];
+        data << endl;
     }
-    fout.close();
+    data.close();
 
     str.clear();
     gol.clear();
