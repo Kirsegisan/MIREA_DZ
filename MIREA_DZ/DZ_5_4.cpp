@@ -2,6 +2,7 @@
 #include "DZ_4_9.h"
 #include <vector>
 
+
 using namespace std;
 
 void DZ_5_4(){
@@ -42,16 +43,16 @@ void DZ_5_4(){
     vector<string> F;
     while (flag){
         cin >> input;
-        if (input == "end"){
+        if (input == "end"){ // Пока не напишем end массив будет заполнятся введёнными числами
             break;
         }
-        F.push_back(input);
+        F.push_back(input); // Запись введённых чисел в массив
         for (int i = 0; i < F.size(); i++){
             cout << F[i] << endl;
         }
 
     }
     for (string str : F){
-        cout << inAnythingtoAnything(in, to, str) << endl;
+        cout << inAnythingtoAnything(in, to, str) << endl; // Выволнения перевода
     }
 }

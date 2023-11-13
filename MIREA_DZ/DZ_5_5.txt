@@ -1,0 +1,10 @@
+Germany 12 9 8 29 178
+Norway 10 10 5 25 155
+Russia 9 6 3 18 114
+Canada 6 5 4 15 92
+USA 6 3 4 13 80
+Japan 5 1 4 10 61
+Korea 3 1 2 6 37
+Austia 3 5 9 17 96
+Finland 2 4 6 12 68
+China 0 6 2 8 46
